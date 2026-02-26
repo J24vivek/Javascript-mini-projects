@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Real-time Search Filter</title>
+    <link rel="stylesheet" href="SearchF.css" />
+  </head>
+  <body>
+    <div class="background-glow"></div>
+    <div class="bigdiv">
+      <div class="top-section">
+        <header class="search-header">
+          <h1>Discover Users</h1>
+        </header>
+
+        <div class="search-wrapper">
+          <div class="search-box">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input class="inp" type="text" placeholder="Search by name..." />
+            <div class="search-glow"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cards-container" id="cardsContainer"></div>
+    </div>
+
+    <script src="SearchF.js"></script>
+  </body>
+</html>

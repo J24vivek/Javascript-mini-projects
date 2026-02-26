@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Toaster</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="Clo_Toaster.css">
+
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-black via-zinc-900 to-black text-white">
+  <!-- Main Container -->
+  <div class="flex h-screen overflow-hidden px-40 py-8 gap-10">
+
+    <!-- Form Card - Fixed Left Side -->
+    <div class="w-[350px] max-w-md bg-zinc-800/70 backdrop-blur rounded-2xl shadow-xl p-5 h-fit sticky top-8">
+      <h2 class="head text-xl font-semibold text-center mb-3">Add User</h2>
+
+      <form class="space-y-3">
+        <div>
+          <label class="text-xs text-gray-300">Name</label>
+          <input type="text" id="name" name="name" required
+            class="w-full mt-1 px-3 py-1.5 rounded-lg bg-zinc-700 border border-zinc-600 focus:outline-none focus:ring-2 focus:ring-gray-500" />
+        </div>
+
+        <div>
+          <label class="text-xs text-gray-300">Role</label>
+          <input type="text" id="role" name="role" required
+            class="w-full mt-1 px-3 py-1.5 rounded-lg bg-zinc-700 border border-zinc-600 focus:outline-none focus:ring-2 focus:ring-gray-500" />
+        </div>
+
+        <div>
+          <label class="text-xs text-gray-300">Bio</label>
+          <textarea rows="3" id="bio" required
+            class="w-full mt-1 px-3 py-1.5 rounded-lg bg-zinc-700 border border-zinc-600 focus:outline-none focus:ring-2 focus:ring-gray-500"></textarea>
+        </div>
+
+        <div>
+          <label class="text-xs text-gray-300">Photo URL</label>
+          <input type="text" id="photo" required
+            class="w-full mt-1 px-3 py-1.5 rounded-lg bg-zinc-700 border border-zinc-600 focus:outline-none focus:ring-2 focus:ring-gray-500" />
+        </div>
+
+        <button type="submit"
+          class="submit w-full mt-4 py-1.5 rounded-lg transition font-medium">
+          Submit
+        </button>
+      </form>
+    </div>
+
+    <!-- User Cards - Scrollable Right Side -->
+    <div class="flex-1 py-8 mt-7 mb-10 overflow-y-auto thin-scrollbar">
+      <!-- Search Bar -->
+      <div class="mb-8 flex items-center gap-4 bg-zinc-800/50 p-2 pl-5 rounded-2xl border border-zinc-700/50 backdrop-blur-md sticky top-0 z-10">
+        <svg class="w-5 h-5 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+        </svg>
+        <input type="text" id="searchInput" placeholder="Search users by name or role..." 
+          class="flex-1 bg-transparent border-none focus:outline-none text-sm text-white placeholder-zinc-500" />
+        <button id="searchBtn" class="bg-emerald-500 hover:bg-emerald-400 text-white px-6 py-2 rounded-xl text-sm font-semibold transition-all shadow-lg shadow-emerald-500/20">
+          Search
+        </button>
+      </div>
+
+      <div class="users grid gap-8 grid-cols-1 lg:grid-cols-2 xl:grid-cols-2">
+      </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- Toaster Container -->
+    <div class="fixed parent z-[9999] pointer-events-none"></div>
+
+    <script src="Clo_Toaster.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+/* Form & Card Styles */
+.head {
+  background: linear-gradient(to right, rgba(16, 185, 129, 0.1), rgba(20, 184, 166, 0.1));
+  padding: 8px;
+  border-radius: 12px;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  color: #10b981;
+}
+
+.submit {
+  background: linear-gradient(135deg, #10b981, #14b8a6);
+  color: white;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.2);
+}
+
+.submit:hover {
+  background: linear-gradient(135deg, #059669, #0d9488);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.3);
+}
+
+.thin-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Search Bar Focus Style */
+#searchInput:focus {
+  outline: none;
+}
+
+#searchInput::placeholder {
+  color: #71717a;
+  transition: color 0.3s ease;
+}
+
+#searchInput:focus::placeholder {
+  color: #a1a1aa;
+}
+
+.thin-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.thin-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #52525b;
+  border-radius: 9999px;
+}
+
+.thin-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #52525b02 transparent;
+}
+
+/* Toaster Animations */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.toaster-item {
+  animation: slideInRight 0.3s ease-out forwards;
+  border-left: 4px solid #4ade80;
+  backdrop-filter: blur(8px);
+  background-color: rgba(39, 39, 42, 0.9);
+  color: white;
+  min-width: 250px;
+}
+
+.toaster-item.removing {
+  animation: slideOutRight 0.3s ease-in forwards;
+}
+
+.parent {
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.parent > * {
+  pointer-events: auto;
+}

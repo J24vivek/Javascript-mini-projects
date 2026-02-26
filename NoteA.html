@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes Application</title>
+    <link rel="stylesheet" href="NoteA.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <h1 class="form-title">Create a New Note</h1>
+
+      <form class="note-form">
+        <div class="form-group">
+          <label for="imageUrl">Image URL</label>
+          <input
+            type="text"
+            placeholder="https://example.com/photo.jpg"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input
+            type="text"
+            id="fullName"
+            name="fullName"
+            placeholder="Enter your full name"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="homeTown">Home Town</label>
+          <input
+            type="text"
+            id="homeTown"
+            name="homeTown"
+            placeholder="Enter your hometown"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="purpose">Purpose</label>
+          <input
+            type="text"
+            id="purpose"
+            name="purpose"
+            placeholder="What is the purpose of this note?"
+            required
+          />
+        </div>
+
+        <div class="form-group category-group">
+          <fieldset class="category">
+            <legend>Category</legend>
+            <div class="radio-group">
+              <label>
+                <input type="radio" name="category" value="option1" required />
+                Emergency</label
+              >
+              <label
+                ><input type="radio" name="category" value="option2" required />
+                Important</label
+              >
+              <label
+                ><input type="radio" name="category" value="option1" required />
+                Urgent</label
+              >
+              <label
+                ><input type="radio" name="category" value="option2" required />
+                No Rush</label
+              >
+            </div>
+          </fieldset>
+        </div>
+
+        <button class="submit-btn">Create Note</button>
+      </form>
+    </div>
+
+    <!-- Notes display -->
+    <div class="note-container">
+      <!-- Left action buttons -->
+      <div class="left-icons">
+        <button
+          id="add-note"
+          class="icon-btn"
+          title="Save"
+          aria-label="add note"
+        >
+          +
+        </button>
+        <button
+          class="Previous-btn"
+          title="Previous"
+          aria-label="Previous note"
+        >
+          <
+        </button>
+        <button class="Next-btn" title="Next" aria-label="Next note">></button>
+      </div>
+
+      <!-- Center card / stack -->
+      <div class="stack">
+      </div>
+
+      <!-- Right color picker -->
+      <div class="right-colors">
+        <span
+          class="color-dot"
+          style="background: #ffe5b4"
+          title="Beige"
+        ></span>
+        <span class="color-dot" style="background: #ffb6c1" title="Pink"></span>
+        <span class="color-dot" style="background: #add8e6" title="Blue"></span>
+        <span
+          class="color-dot"
+          style="background: #90ee90"
+          title="Green"
+        ></span>
+      </div>
+    </div>
+
+    <script src="NoteA.js"></script>
+  </body>
+</html>
